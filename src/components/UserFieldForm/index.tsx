@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Section } from '../common/Section';
 import { User } from '../../api/user';
+import { useFormField } from './useFormField';
 import styles from './styles.less';
 
 export interface UserFieldFormkeys {
@@ -12,26 +13,6 @@ export interface UserFieldFormkeys {
 export interface UserFormProps {
     onChangeUser: (user: User, patch: Partial<User>) => void;
 }
-
-const useFormField = (fieldname: keyof User, value: string, onChange: (value: string) => void) => {
-    switch (fieldname) {
-        case 'title':
-            const options = ['Ms', 'Mr', 'Miss', 'Mrs'];
-            return (
-                <select value={value} onChange={ev => onChange(ev.target.value)}>
-                    {options.map(x => (
-                        <option key={x}>{x}</option>
-                    ))}
-                </select>
-            );
-        case 'firstName':
-        case 'lastName':
-        case 'postCode':
-            return (
-                <input type="text" value={value} onChange={x => onChange(x.target.value)}></input>
-            );
-    }
-};
 
 export const UserFieldForm = ({
     user,
