@@ -1,0 +1,22 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.eol": "\n",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "typescript.suggest.autoImports": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "javascript.validate.enable": true,
+    "eslint.options": {
+        "configFile": ".eslintrc"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript"
+    ],
+    "python.testing.promptToConfigure": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+}
